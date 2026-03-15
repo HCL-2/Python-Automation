@@ -1,0 +1,160 @@
+CICD
+
+1. Github 
+2. Java (maven/gradle)  / DotNet - Msbuild / Python - pybuilder / Angular - npm/node
+3. Sonarqube - static code quality analysis
+4. Artifactory - nexus/jfrog (remote repo)
+-------------------------------------------
+Continous integration
+5 CICD (jenkins/github action)
+---------------------------------
+6. Docker - Container (microservice)
+7. K8s - EKS - Container orestration 
+8. Ansible - Configuration Management 
+9. IAC- Terraform 
+10. Argocd - gitops 
+
+github - SCM - 
+git cmds -- orgnation ---> project --> Team -> 
+git config --global user.name "Praveenkumar1290-janaki"
+git config --global user.email "praveenkumar1290.janaki@gmail.com"
+ git clone https://github.com/HCL-2/microservice.git
+  503  ls
+  504  cd microservice/
+  505  ls
+  506  touch index.html
+  507  ls
+  508  cat index.html
+  509  clear
+  510  ls
+  511  vi index.html
+  512  cat index.html
+  513  git add .
+  514  git status
+  515  git commit -m "index.html file has been created"
+  516  git status
+  517  git log
+  518  clear
+  519* git
+  520  git remote -v
+  521  git remote add praveen https://github.com/HCL-2/microservice.git
+  522  git remote -v
+  523  ls
+  524  touch text
+  525  git add .
+  526  git commit -m "text file created"
+  527  git push praveen main
+  528  clear
+  529  ls
+  530  git pull
+  531  ls
+  532  histroy
+  533  history
+
+git pull == git fetch + git merge
+
+git cherry-pick -
+
+git rebase -
+
+git revert - undo
+git reset - (soft/hard)delete 
+git stash
+git squahs
+
+
+git merge (two differenct merge) example - from develop /  to stage
+
+
+03  git checkout -b develop
+  504  ls
+  505  touch main.py hello.java style.js
+  506  ls
+  507  cat hello.java
+  508  git add .
+  509  git commit -m "devlop branch file created"
+  510  git log --online
+  511  git log --oneline
+  512  git checkout main
+  513  ls
+  514  git merge develop main
+  515  ls
+  516  clear
+  517  git log --oneline
+  518  git checkout develop
+  519  ls
+  520  git checkout -b feature
+  521  ls
+  522  touch A B
+  523  ls
+  524  clear
+  525  ls
+  526  git add .
+  527  rm -rf B
+  528  git add .
+  529  git commit -m "A file creaed"
+  530  git log --oneline
+  531  touch B
+  532  git add .
+  533  git commit -m "B file creaed"
+  534  git log --oneline
+  535  git checkout develop
+  536  ls
+  537  touch C
+  538  git add .
+  539  git commit -m "C file creaed"
+  540  git log --oneline
+  541  touch D
+  542  git commit -m "D file creaed"
+  543  git add .
+  544  git commit -m "D file creaed"
+  545  git log --oneline
+  546  git merge feature develop
+  547  ls
+  548  git log --oneline
+  549  git reset --hard 462898c
+  550  git log --oneline
+  551  touch C
+  552  git add .
+  553  git commit -m "C file creaed"
+  554  touch D
+  555  git add .
+  556  git commit -m "D file creaed"
+  557  git rebase feature develop
+  558  git log --oneline
+  559  ls
+  560  vi main.py
+  561  cat main.py
+  562  git checkout
+  563  vi index.html
+  564  git add .
+  565  git commit -m "as per manager psh"
+  566  cat main.py
+  567  vi main.py
+  568  git checkout feature
+  569  git add .
+  570  git checkout feature
+  571  ls
+  572  vi main.py
+  573  git add ,
+  574  git add
+  575  git add .
+  576  git commit -m "test"
+  577  git push origin feature
+  578  git checkout develop
+  579  cat main.py
+  580  vi main.py
+  581  git stash
+  582  git checkout feature
+  583  vi main.py
+  584  git add .
+  585  git commit -m "as per manager psh"
+  586  git push origin feature
+  587  git checkout develop
+  588  cat main.py
+  589  git statsh list
+  590  git stath list
+  591  git stash list
+  592  git stash pop
+  593  cat main.py
+  594  history
